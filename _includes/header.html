@@ -1,0 +1,98 @@
+<header>
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.bootstrap.header_pages | default: default_paths -%}
+  {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+  <nav class="navbar navbar-light bg-blue navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="{{ "/" | relative_url }}">
+        <img height="24" class="d-inline-block align-text-top" src="{{ '/assets/images/logo.svg' | relative_url }}" />
+        {{ site.title | escape }}
+      </a>
+      <button type="button" class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+          <li class="nav-item">
+            <a href="/cabling/" class="nav-link active text-white" aria-current="page">Cabling</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/vyos-router/" class="nav-link active text-white" aria-current="page">VyOS</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" id="navbarAdvancedDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">Traffic<i class="fa fa-lg fa-angle-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarAdvancedDropdown">
+              <li><a href="/traffic/kreonet/" class="dropdown-item">KREONET</a></li>
+              <li><a href="/traffic/koren/" class="dropdown-item">KOREN</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/sflow-rt/" class="nav-link active text-white" aria-current="page">sFlow-RT</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" id="navbarAdvancedDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">ElastiFlow<i class="fa fa-lg fa-angle-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarAdvancedDropdown">
+              <li><a href="/elastiflow/overview/" class="dropdown-item">Overview</a></li>
+              <li><a href="/elastiflow/geo-ip/" class="dropdown-item">Geo IP</a></li>
+              <li><a href="/elastiflow/as-to-as-flows/" class="dropdown-item">AS to AS Flows</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" id="navbarAdvancedDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">Wireless<i class="fa fa-lg fa-angle-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarAdvancedDropdown">
+              <li><a href="/wireless/wlc/" class="dropdown-item">Cisco WLC</a></li>
+              <li><a href="/wireless/num-clients/" class="dropdown-item">Number of Clients</a></li>
+              <li><a href="/wireless/radio-status/" class="dropdown-item">Radio Status</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" id="navbarAdvancedDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">LibreNMS<i class="fa fa-lg fa-angle-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarAdvancedDropdown">
+              <li><a href="/librenms/devices/" class="dropdown-item">Devices</a></li>
+              <li><a href="/librenms/router-ports/" class="dropdown-item">Router Ports</a></li>
+              <li><a href="/librenms/wlc/" class="dropdown-item">Cisco WLC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle text-white" id="navbarAdvancedDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">Video Team<i class="fa fa-lg fa-angle-down"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarAdvancedDropdown">
+              <li><a href="/videoteam/room/" class="dropdown-item">Room</a></li>
+              <li><a href="/videoteam/list/" class="dropdown-item">List</a></li>
+              <li><a href="/videoteam/closing/" class="dropdown-item">Closing Stats</a></li>
+              <li><a href="/videoteam/conf-reg/" class="dropdown-item">Conference Registrations</a></li>
+              <li><a href="/videoteam/encoding/" class="dropdown-item">Encoding</a></li>
+              <li><a href="/videoteam/home/" class="dropdown-item">Home</a></li>
+              <li><a href="/videoteam/mixing-recording/" class="dropdown-item">Mixing & Recording</a></li>
+              <li><a href="/videoteam/node-export-full/" class="dropdown-item">Node Export Full</a></li>
+              <li><a href="/videoteam/mdadm-status/" class="dropdown-item">mdadm Status</a></li>
+              <li><a href="/videoteam/onsite-network/" class="dropdown-item">Onsite Network</a></li>
+              <li><a href="/videoteam/router-network/" class="dropdown-item">Router Network</a></li>
+              <li><a href="/videoteam/streaming/" class="dropdown-item">Streaming</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="/software/" class="nav-link active text-white" aria-current="page">Software</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/talks/" class="nav-link active text-white" aria-current="page">Talks</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/infra-team/" class="nav-link active text-white" aria-current="page">Infra Team</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
