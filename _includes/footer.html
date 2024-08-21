@@ -1,0 +1,10 @@
+<footer class="footer mt-auto py-3 bg-light h-card">
+<div class="container py-3">
+{%- if site.author %}
+{% if site.author.name -%}
+<p><b>©️ {{ site.author.name | escape }}</b></p>
+{% endif -%}
+{%- endif %}
+{{ site.description | escape }}
+</div>
+</footer>
